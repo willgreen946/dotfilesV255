@@ -1,9 +1,9 @@
-colorscheme = "matrix"
+colorscheme = "homebrew"
 
 base_fg = "green"
 base_bg = "black"
 
-chart_fg = "green"
+chart_fg = "white"
 chart_bg = "black"
 chart_bold = false
 
@@ -15,7 +15,7 @@ marketbar_label_active_fg = "green"
 marketbar_label_active_bg = "black"
 marketbar_label_active_bold = false
 
-menu_fg = "green"
+menu_fg = "white"
 menu_bg = "black"
 menu_bold = false
 
@@ -25,9 +25,9 @@ menu_header_bold = false
 
 menu_label_fg = "green"
 menu_label_bg = "black"
-menu_label_bold = true
+menu_label_bold = false
 
-menu_label_active_fg = "green"
+menu_label_active_fg = "white"
 menu_label_active_bg = "black"
 menu_label_active_bold = true
 
@@ -47,7 +47,7 @@ table_column_change_fg = "green"
 table_column_change_bg = "black"
 table_column_change_bold = false
 
-table_column_change_down_fg = "green"
+table_column_change_down_fg = "yellow"
 table_column_change_down_bg = "black"
 table_column_change_down_bold = false
 
@@ -63,7 +63,7 @@ table_header_column_active_fg = "black"
 table_header_column_active_bg = "green"
 table_header_column_active_bold = false
 
-table_row_fg = "green"
+table_row_fg = "white"
 table_row_bg = "black"
 table_row_bold = false
 
