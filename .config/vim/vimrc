@@ -1,0 +1,8 @@
+set tabstop=2
+syntax on
+colorscheme matrix 
+set expandtab
+set viminfofile='$HOME/.cache/'
+set relativenumber
+set colorcolumn=80
+set number
