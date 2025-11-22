@@ -1,1 +1,36 @@
-asdjhdfajkdffd
+uname=`uname`
+
+set -o vi
+
+# no color prompt
+PS1="[\u@\h \w]% "
+
+# classic luke smith prompt
+#PS1="\[\e[31m\][\[\e[m\]\[\e[33m\]\u\[\e[m\]\[\e[32m\]@\[\e[m\]\[\e[36m\]\h\[\e[m\] \[\e[35m\]\w\[\e[m\]\[\e[31m\]]\[\e[m\]\\$ "
+
+
+alias vi="nvi"
+alias mv="mv -v"
+alias cp="cp -v"
+alias rm="rm -v"
+
+case $uname in
+	"Linux")
+		alias ls="ls -l --color=none"	
+    alias vi="~/bin/vi"
+		alias zzz="echo mem > /sys/power/state"
+		;;
+	"OpenBSD")
+		alias ls="/bin/ls -l"
+		alias zzz="doas sysctl -w hw.acpi.sleep.state=3"
+		;;
+	"NetBSD")
+		alias ls="/bin/ls -l"
+		alias zzz="doas sysctl -w hw.acpi.sleep.state=3"
+		;;
+esac
+
+export TERM=xterm-256color
+
+# Autism or something idk
+#export TERM=vt220
