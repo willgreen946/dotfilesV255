@@ -1,0 +1,80 @@
+set vicmd=vim
+
+filextype *.pgm feh %f
+colorscheme matrix 
+
+nnoremap <C-s> :shell <CR>
+
+" Plain text extensions
+filextype *.txt nvi %f
+
+" Code extensions
+filextype *.c   vim %f
+filextype *.S   vim %f
+filextype *.s   vim %f
+filextype *.m   vim %f
+filextype *.h   vim %f
+filextype *.C   vim %f
+filextype *.pl  vim %f
+filextype *.ex  vim %f
+filextype *.sh  vim %f
+filextype *.cc  vim %f
+filextype *.cs  vim %f
+filextype *.hh  vim %f
+filextype *.rs  vim %f
+filextype *.c++ vim %f
+filextype *.cxx vim %f
+filextype *.cpp vim %f
+filextype *.hpp vim %f
+filextype *.vim vim %f
+filextype *.lua vim %f
+filextype *.asm vim %f
+
+filextype *.html links -g %f &
+
+" Binary extensions
+filextype *.o bvi %f
+filextype *.so bvi %f
+filextype *.exe bvi %f
+filextype *.dll bvi %f
+
+" Image extensions
+filextype *.png  feh --auto-zoom --scale-down -g 500x500 %f &
+filextype *.jpg  feh --auto-zoom --scale-down -g 500x500 %f &
+filextype *.svg  feh --auto-zoom --scale-down -g 500x500 %f &
+filextype *.jpeg feh --auto-zoom --scale-down -g 500x500 %f &
+filextype *.pgm  feh --auto-zoom --scale-down -g 500x500 %f &
+filextype *.ppm  feh --auto-zoom --scale-down -g 500x500 %f &
+
+" Document extensions
+filextype *.ods libreoffice %f &
+filextype *.odt libreoffice %f &
+filextype *.pdf mupdf %f &
+filextype *.doc libreoffice %f &
+filextype *.docx libreoffice %f &
+filextype *.pptx libreoffice %f &
+
+" Audio + video extensions
+filextype *.mp4 mpv %f &
+filextype *.mkv mpv %f &
+filextype *.avi mpv %f &
+filextype *.mp3 mpv %f &
+filextype *.wav mpv %f
+filextype *.ogg mpv %f
+filextype *.flac mpv %f &
+
+"only
+view
+
+" video thumbnails
+fileviewer *.mkv ffmpegthumbnailer -i %c -o $HOME/.cache/vifmvidimg.jpg -s 0 -q 5 && chafa $HOME/.cache/vifmvidimg.jpg
+fileviewer *.avi ffmpegthumbnailer -i %c -o $HOME/.cache/vifmvidimg.jpg -s 0 -q 5 && chafa $HOME/.cache/vifmvidimg.jpg
+fileviewer *.mp4 ffmpegthumbnailer -i %c -o $HOME/.cache/vifmvidimg.jpg -s 0 -q 5 && chafa $HOME/.cache/vifmvidimg.jpg
+
+" image thumbnails
+fileviewer *.png chafa %c
+fileviewer *.jpg chafa %c
+fileviewer *.jpeg chafa %c
+fileviewer *.pgm chafa %c
+fileviewer *.ppm chafa %c
+fileviewer *.svg chafa %c
