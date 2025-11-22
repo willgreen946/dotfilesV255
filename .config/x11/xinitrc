@@ -1,1 +1,39 @@
-asksdafjd
+#!/bin/sh
+
+userresources=$HOME/.Xresources
+usermodmap=$HOME/.Xmodmap
+sysresources=/etc/X11/xinit/.Xresources
+sysmodmap=/etc/X11/xinit/.Xmodmap
+
+# swap caps lock and escape
+setxkbmap -option caps:swapescape
+
+# use uk layout
+setxkbmap -layout gb
+
+# set cursor
+xsetroot -cursor_name left_ptr
+xsetroot -solid 'rgb:00/00/00'
+
+# middle click scroll (Openbsd)
+xinput set-prop "/dev/wsmouse" "WS Pointer Wheel Emulation" 1
+xinput set-prop "/dev/wsmouse" "WS Pointer Wheel Emulation Button" 2
+xinput set-prop "/dev/wsmouse" "WS Pointer Wheel Emulation Axes" 6 7 4 5
+
+#sh /home/will/.config/screenlayout/wide-square.sh
+
+# start terminal
+st -e tmux &
+
+slstatus &
+
+# wallpaper
+feh --no-fehbg --bg-scale /home/will/pictures/wallpapers/Dreamscape.png
+
+xmr-price &
+
+while true;
+ do
+  # window manager
+  dwm
+done
